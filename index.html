@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Building</title>
+        <link rel="icon" href="/images/building_logo.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .headerClass{
+            /* border: 2px solid blue; */
+            padding: 0px;
+            background-color: rgb(183, 28, 28);
+        }
+        .left {
+           /* border: 2px solid red;  */
+           display: inline-block;
+           width: 25%; 
+           padding:0px 23px;
+           margin: 0px;
+        }
+        .right{
+            /* border: 2px solid green; */
+            display: inline-block; 
+            position: absolute;
+            right: 0px;
+            width: 13%;
+            padding: 17px 16px;
+            margin: 0px;
+        }
+        .left img{
+            width: 44px;
+            height: 36px;
+            position: relative;
+            top: 10px;
+        }
+        .left div{
+            position: relative;
+            left:  63px;
+            top: -20px;
+            letter-spacing: 4px;
+            color: white;
+        }
+        .right div{
+            font-size: 20px;
+            color: white;
+        }
+        .heading{
+            /* border: 2px solid black; */
+            font-weight: bold;  
+            padding: 16px 23px;
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        #table{
+            border: 2px solid #dee2e6;
+            width: 49%;
+            margin: 8px 24% ;
+            
+        }
+        td{
+            padding: 17px 17px ;
+            position: relative;
+            font-size: 15px;
+            border-bottom: 2px solid #dee2e6;            
+        }
+        th{
+            padding: 17px 58px ;
+            background-color: #dee2e6;
+            border-collapse: collapse;
+            font-size: 17px;
+            border-bottom: 2px solid #dee2e6;            
+        }  
+        .mainDashboard{
+            padding: 10px;
+            text-align: left;
+            background-color: rgb(183, 28, 28);
+            color: white;
+        }
+        .paidButton{
+            padding: 1px 21px;
+            margin: 3px 14px;
+            border-radius: 7px;
+            position: absolute;
+            right: 0px;
+            font-size: 15px;
+        }
+        .expenses{
+            /* position: relative; */
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+            border-radius: 5px;
+            padding: 5px 10px ;
+            color: white;
+        }
+        .september{
+            /* position: absolute; */
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px ;
+        }
+        .august{
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px ;
+        }
+        </style>
+    </head>
+<body>
+    <header class="headerClass">
+        <div class="left">
+            <img src="/images/apartment.png" alt="">
+            <div> S S <b>APARTMENTS </b> </div>
+        </div>
+        <div class="right">
+            <!-- <p>Balance<span id="demo1"></span>/-</p> -->
+            <div>Balance <span id="topBalance"></span>/-</div>
+        </div>
+    </header>
+    <div class="heading">OCTOBER</div>
+
+    <div id="table">
+        <table>
+            <tr>
+                <th colspan="2" class="mainDashboard">Main Dashboard</th>
+            </tr>
+            <tr>
+                <th>Plot No 19 (3rd Floor)</th>
+                <th>Plot No 20 (3rd Floor)</th>
+            </tr>
+            <tr>
+                <td>Rohit Gupta Ji (<span class="balance">500</span>/-)<button type="button" class="paidButton">Paid</button></td>   
+                <td>Nand Kishor Ji <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <td>Prabhu Dayal Ji (<span class="balance">500</span>/-)<button type="button" class="paidButton">Paid</button></td>
+                <td>Randhir Singh Ji (<span class="balance">500</span>/-)<button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <th>Plot No 19 (2nd Floor)</th>
+                <th>Plot No 20 (2nd Floor)</th>
+            </tr>
+            <tr>
+                <td>Rajesh Jain Ji (Vacant Flat) <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+                <td>Kunal Ji (Vacant Flat) <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <td>Akash Jaiswal Ji (<span class="balance">500</span> /-)<button type="button" class="paidButton">Paid</button></td>
+                <td>Mukesh Jha Ji <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <th>Plot No 19 (1st Floor)</th>
+                <th>Plot No 20 (1st Floor)</th>
+            </tr>
+            <tr>
+                <td>Daya Ram Ji ( <span class="balance">500</span>/-)<button type="button" class="paidButton">Paid</button></td>
+                <td>Sunil Ji (<span class="balance">500</span> /-)<button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <td>Rajesh Ji (Back Side) <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+                <td>Rahul Dua Ji (<span class="balance">500</span>/-)<button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <th>Plot No 19 (Ground) Floor)</th>
+                <th>Plot No 20 (Ground Floor)</th>
+            </tr>
+            <tr>
+                <td>Tarun Mishra Ji (<span class="balance">500</span> /-)<button type="button" class="paidButton">Paid</button></td>
+                <td>Sushma Ji (<span class="balance">500</span>/-)<button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <td>Yadav Ram Ji (Vacant Flat <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+                <td>Rajesh Jain Ji (Vacant Flat) <span class="balance"></span><button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <th>Parking</th>
+                <th>Parking</th>
+            </tr>
+            <tr>
+                <td>Parking Shop (Anis Ji) (<span class="balance">200</span>/-)<button type="button" class="paidButton">Paid</button></td>
+                <td>Baccha Floor (<span class="balance">100</span>/-)<button type="button" class="paidButton">Paid</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="expenses" data-toggle="modal" data-target="#exampleModalLong">Expenses</button>
+                    <button type="button" class="september">September</button>
+                    <button type="button" class="august">August</button>
+                </td>    
+                
+            </tr>
+            <!-- <tr>
+                <button>Expenses</button>
+                <button>September</button>
+                <button>October</button>
+            </tr> -->
+        </table>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">October</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+              <li>Total Collection = Rs <span id="totalCalculation"></span></li>
+              <li>Last Month Savings = Rs <span id="lastMonthBal"></span></li>
+          </ul>
+          
+          <br>
+          <p>|----Monthly Payment----|</p>
+          <br>
+
+          <ul>
+              <li>Gita (Kachra(1/11/21)) = Rs <span id="gitaExpense"></span></li>
+              <li>Jarina (Pocha) = Rs <span id="jarinaExpense"></span></li>
+              <li>Gutter Jet Safai = Rs <span id="gutter"></span></li>
+              <li>Meter Connecter = Rs <span id="meter"></span></li>
+              <li>CCTV Wifi Connection = Rs <span id="cctvWifi"></span></li>
+          </ul>
+
+          <br>
+          <p>|--------Final Calculation--------|</p>
+          <br>
+          <p> <b>Total = </b> <span id="finalCalculation"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btnSecondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btnPrimary"></button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- <button class="expenses" onclick="myFunction()">Expenses</button> -->
+    <script>
+        // document.getElementById("topBalance").innerHTML=document.getElementsByClassName("balance")[i].innerHTML;
+        let gita=1400,jarina=1700,cctv=500;
+        let sum=0,lastMonth=20000,totalCalc,allExpenses;
+        for(i=0;i<18;i++){
+            sum+=Number(document.getElementsByClassName ("balance")[i].innerHTML);
+        }
+        document.getElementById("topBalance").innerHTML=sum;
+        document.getElementById("totalCalculation").innerHTML=sum;
+        document.getElementById("lastMonthBal").innerHTML=lastMonth;
+
+        for(i=0;i<18;i++){
+            if(Number(document.getElementsByClassName ("balance")[i].innerHTML)==500){
+                document.getElementsByClassName("paidButton")[i].innerHTML="Paid";
+                document.getElementsByClassName("paidButton")[i].style.backgroundColor="rgb(187, 236, 187)";
+                document.getElementsByClassName("paidButton")[i].style.borderColor="rgb(187, 236, 187)";
+                document.getElementsByClassName("paidButton")[i].style.color="green";
+            }
+            else{
+                document.getElementsByClassName("paidButton")[i].innerHTML="Unpaid";
+                document.getElementsByClassName("paidButton")[i].style.backgroundColor="rgb(243, 156, 156)";
+                document.getElementsByClassName("paidButton")[i].style.borderColor="rgb(243, 156, 156)";
+                document.getElementsByClassName("paidButton")[i].style.color="red";
+            }
+        }
+
+        document.getElementById("gitaExpense").innerHTML=gita;
+        document.getElementById("jarinaExpense").innerHTML=jarina;
+        document.getElementById("cctvWifi").innerHTML=cctv;
+        document.getElementById("gutter").innerHTML="1000";
+        document.getElementById("meter").innerHTML="500";
+
+        allExpenses=gita+jarina+cctv+1000+500;
+        let savings=sum+lastMonth;
+        totalCalc=savings-allExpenses;
+        document.getElementById("finalCalculation").innerHTML="Rs "+ savings + " - Rs "+ allExpenses + " = " + " Rs " +totalCalc;
+        document.getElementById("finalCalculation").style.fontWeight="bold";
+        // function myFunction(){
+        //     document.getElementById("modal").style.display="block";     
+        // }
+    </script>
+</body>
+</html>
